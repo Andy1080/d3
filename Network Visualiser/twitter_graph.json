@@ -1,0 +1,38 @@
+{
+    "nodes": [
+        {
+            "id": "Matthew"
+        }, 
+        {
+            "id": "Mark"
+        }, 
+        {
+            "id": "Luke"
+        }, 
+        { 
+            "id": "John"
+        }],
+		
+	"links": [
+        {
+            "type": "MS", 
+            "target": 0, 
+            "source": 1
+        }, 
+        {
+            "type": "RT", 
+            "target": 1, 
+            "source": 2
+        }, 
+        {
+            "type": "RT", 
+            "target": 3, 
+            "source": 2
+        }, 
+        {
+            "type": "RT", 
+            "target": 3, 
+            "source": 0
+        } ]
+		
+}
