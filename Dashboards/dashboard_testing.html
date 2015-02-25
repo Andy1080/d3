@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+rect {
+	fill:steelblue;
+}
+
+</style>
+
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+
+<svg width="300" height="600"> </svg>
+
+<script>
+
+var dataset = [1,2,3,4,5];
+
+var svg = d3.select('svg');
+
+var rects = svg.selectAll('rect')
+				.data(dataset)
+				.enter()
+				.append('rect')
+				.attr('height', 20)
+				.attr('width', function(d,i) {
+					return 50*d;
+				})
+				.attr('x',0)
+				.attr('y', function(d,i) {
+					return 20 + 30*i;
+				});
+
+rects = rects.data([2,3,4,5,6], String);
+				
+rects.enter().append('rect')
+.attr('height', 20)
+.attr('width', function(d,i) {
+	return 50*d;
+})
+.style('opacity',0)
+.attr('x',0)
+.attr('y', function(d,i) {
+					return 20 + 30*(i+1);
+				});
+				
+rects.transition()
+.duration(3000)
+.style('opacity',1)
+.attr('y', function(d,i) {
+					return 20 + 30*(i);
+				});
+	
+rects.exit()
+.transition()
+.duration(3000)
+.style('opacity',0)
+.attr('y', function(d,i) {
+					return 20 + 30*(i-1);
+				})
+.remove();
+
+</script>
+
+</body>
+
+</html>
