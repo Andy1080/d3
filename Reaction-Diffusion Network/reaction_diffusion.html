@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>Reaction Diffusion Network</title>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<svg width=1024 height=1024> </svg>
+
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+var graph = getUrlVars()['graph']
+
+</script>
+
+
+<script>
+
+d3.json(graph + ".json", function(error, d) {
+	var links = d.links;	
+	var nodes = d.nodes;
+
+	var svg = d3.selectAll('svg')
+	
+	var colour = d3.scale.linear()
+    .domain([0, 1.5, 3])
+    .range(["red", "green", "blue"]);
+	
+	var force = d3.layout.force()
+		.links(links)
+		.nodes(nodes)
+		.linkDistance( function(d) { return Math.pow(d.x_diff,2); })
+		.size([1024,1024])
+		.gravity(0.05)
+		.charge(-1000)
+		.start();
+	
+	var edges = svg.append("g").selectAll("line")
+		.data(links)
+		.enter().append("line")
+		.style("stroke-width", 1)
+		.style("stroke-opacity", 0.5)
+		.style("stroke", "black");
+	
+	
+	var circle = svg.append("g").selectAll("circle")
+		.data(force.nodes())
+	    .enter().append("circle")
+		.attr("r", 10)
+		.style("fill", function(d) { return colour(d.x_con) });
+
+	force.on("tick", function() {
+		circle.attr("cx", function(d) { return d.x; })
+              .attr("cy", function(d) { return d.y; });
+		edges.attr("x1", function(d) { return d.source.x; })
+			  .attr("y1", function(d) { return d.source.y; })
+              .attr("x2", function(d) { return d.target.x; })
+              .attr("y2", function(d) { return d.target.y; });	  
+			  
+	});	
+		
+});
+		
+</script>
+
+
+
+</body>
+
+</html>
