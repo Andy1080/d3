@@ -1,0 +1,217 @@
+{
+    "nodes": [
+        {
+            "x_con": 0.8421,
+            "y_con": 0.8324,
+            "id": 0
+        },
+        {
+            "x_con": 0.4414,
+            "y_con": 2.502,
+            "id": 1
+        },
+        {
+            "x_con": 0.4917,
+            "y_con": 2.1517,
+            "id": 2
+        },
+        {
+            "x_con": 0.8878,
+            "y_con": 0.7223,
+            "id": 3
+        },
+        {
+            "x_con": 0.6188,
+            "y_con": 1.5495,
+            "id": 4
+        },
+        {
+            "x_con": 0.5286,
+            "y_con": 1.9371,
+            "id": 5
+        },
+        {
+            "x_con": 0.9336,
+            "y_con": 0.6494,
+            "id": 6
+        },
+        {
+            "x_con": 0.6178,
+            "y_con": 1.5195,
+            "id": 7
+        },
+        {
+            "x_con": 0.8421,
+            "y_con": 0.8324,
+            "id": 8
+        },
+        {
+            "x_con": 0.8375,
+            "y_con": 0.8036,
+            "id": 9
+        }
+    ],
+    "links": [
+        {
+            "x_diff": 0,
+            "source": 0,
+            "target": 8,
+            "weight": 1,
+            "y_diff": 0
+        },
+        {
+            "x_diff": 0.40069999999999995,
+            "source": 0,
+            "target": 1,
+            "weight": 1,
+            "y_diff": 1.6695999999999998
+        },
+        {
+            "x_diff": 0.35039999999999993,
+            "source": 0,
+            "target": 2,
+            "weight": 1,
+            "y_diff": 1.3193
+        },
+        {
+            "x_diff": 0.045700000000000074,
+            "source": 0,
+            "target": 3,
+            "weight": 1,
+            "y_diff": 0.11009999999999998
+        },
+        {
+            "x_diff": 0.3135,
+            "source": 0,
+            "target": 5,
+            "weight": 1,
+            "y_diff": 1.1047
+        },
+        {
+            "x_diff": 0.4464,
+            "source": 1,
+            "target": 3,
+            "weight": 1,
+            "y_diff": 1.7796999999999996
+        },
+        {
+            "x_diff": 0.49219999999999997,
+            "source": 1,
+            "target": 6,
+            "weight": 1,
+            "y_diff": 1.8525999999999998
+        },
+        {
+            "x_diff": 0.1764,
+            "source": 1,
+            "target": 7,
+            "weight": 1,
+            "y_diff": 0.9824999999999997
+        },
+        {
+            "x_diff": 0.40069999999999995,
+            "source": 1,
+            "target": 8,
+            "weight": 1,
+            "y_diff": 1.6695999999999998
+        },
+        {
+            "x_diff": 0.3961,
+            "source": 1,
+            "target": 9,
+            "weight": 1,
+            "y_diff": 1.6984
+        },
+        {
+            "x_diff": 0.35039999999999993,
+            "source": 2,
+            "target": 8,
+            "weight": 1,
+            "y_diff": 1.3193
+        },
+        {
+            "x_diff": 0.3961,
+            "source": 2,
+            "target": 3,
+            "weight": 1,
+            "y_diff": 1.4293999999999998
+        },
+        {
+            "x_diff": 0.1271,
+            "source": 2,
+            "target": 4,
+            "weight": 1,
+            "y_diff": 0.6021999999999998
+        },
+        {
+            "x_diff": 0.3458,
+            "source": 2,
+            "target": 9,
+            "weight": 1,
+            "y_diff": 1.3481
+        },
+        {
+            "x_diff": 0.269,
+            "source": 3,
+            "target": 4,
+            "weight": 1,
+            "y_diff": 0.8272
+        },
+        {
+            "x_diff": 0.045700000000000074,
+            "source": 3,
+            "target": 8,
+            "weight": 1,
+            "y_diff": 0.11009999999999998
+        },
+        {
+            "x_diff": 0.2187,
+            "source": 4,
+            "target": 9,
+            "weight": 1,
+            "y_diff": 0.7459000000000001
+        },
+        {
+            "x_diff": 0.3135,
+            "source": 5,
+            "target": 8,
+            "weight": 1,
+            "y_diff": 1.1047
+        },
+        {
+            "x_diff": 0.405,
+            "source": 5,
+            "target": 6,
+            "weight": 1,
+            "y_diff": 1.2877
+        },
+        {
+            "x_diff": 0.08920000000000006,
+            "source": 5,
+            "target": 7,
+            "weight": 1,
+            "y_diff": 0.41759999999999997
+        },
+        {
+            "x_diff": 0.09609999999999996,
+            "source": 6,
+            "target": 9,
+            "weight": 1,
+            "y_diff": 0.1542
+        },
+        {
+            "x_diff": 0.31579999999999997,
+            "source": 6,
+            "target": 7,
+            "weight": 1,
+            "y_diff": 0.8701000000000001
+        },
+        {
+            "x_diff": 0.2197,
+            "source": 7,
+            "target": 9,
+            "weight": 1,
+            "y_diff": 0.7159000000000001
+        }
+    ]
+}
