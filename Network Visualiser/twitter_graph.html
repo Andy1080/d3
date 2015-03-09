@@ -123,12 +123,6 @@ d3.json("twitter_graph.json", function(error, graph) {
 	// Use elliptical arc path segments to doubly-encode directionality.
 	function tick() {
 	
-	  var percent = String( Number(1000*(0.1 - (force.alpha()-0.005))).toFixed(0) );
-	  d3.select("div.progress-bar")
-					.attr("aria-valuenow", percent)
-					.attr("style","width: "+percent+"%;")
-					.text(percent + "%");
-	
 	  path.attr("d", function(d) {
 		var dx = d.target.x - d.source.x,
 			dy = d.target.y - d.source.y,
